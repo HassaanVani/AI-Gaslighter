@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+}
+
+/* ── Gemini-inspired color tokens ── */
+:root {
+  --bg-primary: #131314;
+  --bg-surface: #1e1f20;
+  --bg-surface-hover: #282a2c;
+  --bg-surface-active: #303134;
+  --bg-user-bubble: #1a3050;
+  --bg-input: #1e1f20;
+
+  --border: #3c404380;
+  --border-hover: #5f636860;
+  --border-input: #3c404360;
+
+  --text-primary: #e3e3e3;
+  --text-secondary: #9aa0a6;
+  --text-hint: #5f6368;
+
+  --accent: #8ab4f8;
+  --accent-dim: #8ab4f830;
+
+  --tamper-color: #f0b13a;
+  --tamper-bg: #f0b13a10;
+  --tamper-border: #f0b13a20;
+
+  --danger: #f28b82;
+  --success: #81c995;
+}
+
+/* ── Base ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-hint);
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--text-primary);
+}
+
+/* ── Keyframes ── */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-fast {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-dot {
+  0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.35s ease-out both;
+}
+
+.animate-fade-in-fast {
+  animation: fade-in-fast 0.2s ease-out both;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.45s ease-out both;
+}
+
+/* ── Typing dots ── */
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  animation: pulse-dot 1.4s infinite ease-in-out;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* ── Gradient text (Gemini-style greeting) ── */
+.gradient-text {
+  background: linear-gradient(
+    74deg,
+    #4285f4 0%,
+    #9b72cb 18%,
+    #d96570 36%,
+    #d96570 42%,
+    #9b72cb 58%,
+    #4285f4 76%,
+    #4285f4 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Textarea auto-sizing ── */
+textarea {
+  field-sizing: content;
+}
