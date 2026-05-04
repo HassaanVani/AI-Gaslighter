@@ -7,20 +7,20 @@
 
 /* ── Gemini-inspired color tokens ── */
 :root {
-  --bg-primary: #131314;
-  --bg-surface: #1e1f20;
-  --bg-surface-hover: #282a2c;
-  --bg-surface-active: #303134;
-  --bg-user-bubble: #1a3050;
-  --bg-input: #1e1f20;
+  --bg-primary: #0f0f11;
+  --bg-surface: #18181b;
+  --bg-surface-hover: #27272a;
+  --bg-surface-active: #3f3f46;
+  --bg-user-bubble: #27272a;
+  --bg-input: #18181b;
 
-  --border: #3c404380;
-  --border-hover: #5f636860;
-  --border-input: #3c404360;
+  --border: #27272a;
+  --border-hover: #3f3f46;
+  --border-input: #3f3f46;
 
-  --text-primary: #e3e3e3;
-  --text-secondary: #9aa0a6;
-  --text-hint: #5f6368;
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-hint: #71717a;
 
   --accent: #8ab4f8;
   --accent-dim: #8ab4f830;

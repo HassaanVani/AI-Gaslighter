@@ -38,7 +38,7 @@ export default function ChatInput({ onSend, disabled }: ChatInputProps) {
   const canSend = value.trim().length > 0 && !disabled;
 
   return (
-    <div className="px-4 pb-4 pt-2">
+    <div className="px-4 pb-8 pt-2">
       <div className="max-w-3xl mx-auto">
         {/* Input container — Gemini pill shape */}
         <div
@@ -61,7 +61,7 @@ export default function ChatInput({ onSend, disabled }: ChatInputProps) {
             placeholder={disabled ? "Waiting for response..." : "Enter a prompt here"}
             disabled={disabled}
             rows={1}
-            className="flex-1 bg-transparent text-sm outline-none resize-none px-6 py-4 disabled:opacity-40"
+            className="flex-1 bg-transparent text-sm outline-none resize-none px-6 py-4 disabled:opacity-40 placeholder:text-[var(--text-secondary)]"
             style={{
               color: "var(--text-primary)",
               lineHeight: "1.5",
@@ -98,7 +98,7 @@ export default function ChatInput({ onSend, disabled }: ChatInputProps) {
         {/* Disclaimer */}
         <p
           className="text-center mt-3 text-xs"
-          style={{ color: "var(--text-hint)" }}
+          style={{ color: "var(--text-secondary)" }}
         >
           AI Gaslighter may display inaccurate info. Double-click AI responses to edit them.
         </p>

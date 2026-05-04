@@ -224,7 +224,7 @@ export default function Home() {
     >
       {/* ── Header ── */}
       <header
-        className="shrink-0 flex items-center justify-between px-5 py-3"
+        className="shrink-0 flex items-center justify-between px-6 py-4"
         style={{
           borderBottom: "1px solid var(--border)",
         }}
@@ -503,8 +503,8 @@ export default function Home() {
                         {s.title}
                       </div>
                       <div
-                        className="text-xs"
-                        style={{ color: "var(--text-hint)" }}
+                        className="text-xs mt-1.5"
+                        style={{ color: "var(--text-secondary)" }}
                       >
                         {s.subtitle}
                       </div>

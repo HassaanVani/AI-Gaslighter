@@ -137,13 +137,13 @@ export default function ChatMessage({
                   e.target.style.height = e.target.scrollHeight + "px";
                 }}
                 onKeyDown={handleKeyDown}
-                className="w-full rounded-xl p-4 text-sm outline-none resize-none"
+                className="w-full rounded-xl p-4 text-sm outline-none resize-none focus:ring-1 focus:ring-[var(--accent)]"
                 style={{
                   background: "var(--bg-surface)",
                   border: "1px solid var(--accent)",
                   color: "var(--text-primary)",
                   lineHeight: "1.6",
-                  minHeight: "60px",
+                  minHeight: "80px",
                 }}
               />
               <div className="flex items-center gap-2 mt-3">

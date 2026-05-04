@@ -56,7 +56,7 @@ export default function ApiKeyModal({ onSubmit }: ApiKeyModalProps) {
             onChange={(e) => setKey(e.target.value)}
             placeholder="sk-..."
             autoFocus
-            className="w-full rounded-2xl px-5 py-3.5 text-sm outline-none transition-colors duration-200"
+            className="w-full rounded-2xl px-5 py-3.5 text-sm outline-none transition-colors duration-200 placeholder:text-[var(--text-secondary)] focus:border-[var(--accent)]"
             style={{
               background: "var(--bg-surface)",
               border: "1px solid var(--border-input)",
@@ -75,7 +75,7 @@ export default function ApiKeyModal({ onSubmit }: ApiKeyModalProps) {
             id="submit-api-key"
             type="submit"
             disabled={!key.trim()}
-            className="w-full mt-4 rounded-2xl px-5 py-3.5 text-sm font-medium transition-all duration-200 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed"
+            className="w-full mt-4 rounded-2xl px-5 py-3.5 text-sm font-medium transition-all duration-200 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
             style={{
               background: key.trim() ? "var(--accent)" : "var(--bg-surface)",
               color: key.trim() ? "#131314" : "var(--text-hint)",
